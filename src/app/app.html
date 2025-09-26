@@ -1,3 +1,13 @@
-<h1>Welcome to my Angular app!</h1>
-<p>Name: {{ studentName }}</p>
-<p>Course: {{ courseName }}</p>
+<div class="space">
+  <h2>Car Inventory</h2>
+
+  <div class="container">
+    <div *ngFor = "let car of cars">
+      <h3>{{car.vin}}</h3>
+      <p><strong>Year:</strong> {{car.year}}</p>
+      <p><strong>Make:</strong> {{car.make}}</p>
+      <p><strong>Model:</strong> {{car.model}}</p>
+      <p *ngIf="car.color"><strong>Color:</strong> {{car.color}}</p>
+    </div>
+  </div>
+</div>

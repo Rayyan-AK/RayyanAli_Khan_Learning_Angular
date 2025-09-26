@@ -1,0 +1,53 @@
+.space {
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 10em;
+  padding: 5em;
+  background-color: beige;
+  color: saddlebrown;
+  border-radius: 4em;
+}
+
+h2 {
+  text-align: center;
+  color: sienna;
+  margin: 1em;
+  font-size: 3em;
+  text-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20em 20em 20em;
+  gap: 2em;
+  padding: 2em;
+  justify-content: center;
+}
+
+.container div {
+  background: peru;
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container div:hover {
+  transform: translateY(-0.5em);
+  box-shadow: 0 0.8em 2.5em saddlebrown;
+}
+
+h3 {
+  color: darkred;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+p {
+  margin: 0.5em;
+  font-size: 1em;
+  color: maroon;
+}
+
+p strong {
+  color: navajowhite;
+}
