@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Car} from '../Shared/Models/car';
 
 @Component({
   selector: 'app-car-list-item',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './car-list-item.component.css'
 })
 export class CarListItemComponent {
-
+  @Input() car!: Car;
 }
