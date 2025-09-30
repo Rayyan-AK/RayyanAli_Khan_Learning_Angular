@@ -1,6 +1,19 @@
+
 .content-item {
-  border: 2px solid black; 
+  border: 2px solid black;
   padding: 10px;
   margin: 5px 0;
   border-radius: 4px;
 }
+
+:host:nth-child(even) .content-item {
+  display: block;
+  background-color: pink;
+}
+
+:host:nth-child(odd) .content-item {
+  display: block;
+  background-color: teal;
+  color: white;
+}
+

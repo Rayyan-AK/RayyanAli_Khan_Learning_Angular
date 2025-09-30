@@ -1,6 +1,7 @@
-<h1>Car Inventory</h1>
+<div class="space">
+  <h1>Car Inventory</h1>
 
-<app-car-list-item [car]="cars[0]"></app-car-list-item>
-<app-car-list-item [car]="cars[1]"></app-car-list-item>
-<app-car-list-item [car]="cars[2]"></app-car-list-item>
-<app-car-list-item [car]="cars[3]"></app-car-list-item>
+  <div class="container">
+    <app-car-list-item *ngFor="let car of cars" [car]="car"></app-car-list-item>
+  </div>
+</div>
