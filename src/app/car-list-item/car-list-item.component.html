@@ -1,1 +1,9 @@
-<p>car-list-item works!</p>
+
+
+<div class="content-item">
+  <h2>{{ car.make }} {{ car.model }}</h2>
+  <p>Year: {{ car.year }}</p>
+  <p *ngIf="car.color">Color: {{ car.color }}</p>
+</div>
+
+

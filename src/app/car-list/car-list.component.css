@@ -1,0 +1,7 @@
+h1 {
+  text-align: center;
+  color: sienna;
+  margin: 1em;
+  font-size: 3em;
+  text-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.3);
+}
