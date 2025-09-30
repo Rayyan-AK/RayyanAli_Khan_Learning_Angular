@@ -4,4 +4,5 @@
     model: string;
     year: number;
     color?: string;
+    image: string;
   }

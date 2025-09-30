@@ -1,19 +1,29 @@
 
 .content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
   border: 2px solid black;
-  padding: 10px;
+  border-radius: 5px;
   margin: 5px 0;
-  border-radius: 4px;
 }
 
 :host:nth-child(even) .content-item {
-  display: block;
   background-color: pink;
+  color: black;
 }
 
 :host:nth-child(odd) .content-item {
-  display: block;
   background-color: teal;
   color: white;
 }
 
+.car-info {
+  flex: 1;
+}
+
+.car-image img {
+  max-width: 200px;
+  border-radius: 5px;
+}
