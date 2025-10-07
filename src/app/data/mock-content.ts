@@ -1,7 +1,7 @@
 import {Car} from '../Shared/Models/car';
 
 export class CarListComponent {
-  cars: Car[] = [
+  static cars: Car[] = [
     {vin: '1HGCM82633A004352', make: 'Honda', model: 'Civic', year: 2020, color: 'Black', image: 'cars/HondaCivic.png'},
     {vin: '2C3KA53G76H123456', make: 'Chrysler', model: '300', year: 2018, image: 'cars/Chrysler.png'},
     {vin: '3FAHP0HA8AR123789', make: 'Ford', model: 'Fusion', year: 2021, color: 'Red', image: 'cars/FordFusion.png'},
