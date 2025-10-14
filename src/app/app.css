@@ -1,53 +1,92 @@
-.space {
-  font-family: "Trebuchet MS", sans-serif;
-  margin: 10em;
-  padding: 5em;
-  background-color: beige;
-  color: saddlebrown;
-  border-radius: 4em;
+/*.space {*/
+/*  font-family: "Trebuchet MS", sans-serif;*/
+/*  margin: 10em;*/
+/*  padding: 5em;*/
+/*  background-color: beige;*/
+/*  color: saddlebrown;*/
+/*  border-radius: 4em;*/
+/*}*/
+
+/*h2 {*/
+/*  text-align: center;*/
+/*  color: sienna;*/
+/*  margin: 1em;*/
+/*  font-size: 3em;*/
+/*  text-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+/*.container {*/
+/*  display: grid;*/
+/*  grid-template-columns: 20em 20em 20em;*/
+/*  gap: 2em;*/
+/*  padding: 2em;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.container div {*/
+/*  background: peru;*/
+/*  border-radius: 1em;*/
+/*  padding: 1.5em;*/
+/*  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);*/
+/*  transition: transform 0.2s ease, box-shadow 0.2s ease;*/
+/*}*/
+
+/*.container div:hover {*/
+/*  transform: translateY(-0.5em);*/
+/*  box-shadow: 0 0.8em 2.5em saddlebrown;*/
+/*}*/
+
+/*h3 {*/
+/*  color: darkred;*/
+/*  font-size: 1.2em;*/
+/*  margin-bottom: 0.8em;*/
+/*}*/
+
+/*p {*/
+/*  margin: 0.5em;*/
+/*  font-size: 1em;*/
+/*  color: maroon;*/
+/*}*/
+
+/*p strong {*/
+/*  color: navajowhite;*/
+/*}*/
+
+
+.nav-bar {
+  background-color: darkslategray;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
 }
 
-h2 {
-  text-align: center;
-  color: sienna;
-  margin: 1em;
-  font-size: 3em;
-  text-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.3);
+
+.nav-bar nav {
+  display: flex;
+  gap: 20px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 20em 20em 20em;
-  gap: 2em;
-  padding: 2em;
-  justify-content: center;
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.container div {
-  background: peru;
-  border-radius: 1em;
-  padding: 1.5em;
-  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.nav-bar a:hover {
+  background-color: steelblue;
+  color: white;
 }
 
-.container div:hover {
-  transform: translateY(-0.5em);
-  box-shadow: 0 0.8em 2.5em saddlebrown;
+.nav-bar a.active {
+  background-color: steelblue;
+  color: white;
+  font-weight: 600;
 }
 
-h3 {
-  color: darkred;
-  font-size: 1.2em;
-  margin-bottom: 0.8em;
-}
 
-p {
-  margin: 0.5em;
-  font-size: 1em;
-  color: maroon;
-}
-
-p strong {
-  color: navajowhite;
-}

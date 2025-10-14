@@ -12,7 +12,17 @@
 <!--  </div>-->
 <!--</div>-->
 
-<app-car-list-item *ngIf="selectedCar" [car]="selectedCar"></app-car-list-item>
-<app-car-list></app-car-list>
+
+
+<!--<app-car-list-item *ngIf="selectedCar" [car]="selectedCar"></app-car-list-item>-->
+
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/cars" routerLinkActive="active">Car List</a>
+    <a routerLink="/modify-car" routerLinkActive="active">Modify Car</a>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
 
 

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CarListItemComponent} from '../car-list-item/car-list-item.component';
 import {NgForOf, NgIf} from '@angular/common';
 import {Car} from '../Shared/Models/car';
-import {CarService} from '../services/car.service';
+import {CarService} from '../Services/car.service';
 
 
 @Component({

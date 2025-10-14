@@ -1,14 +1,15 @@
 import { Component, signal, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { NgForOf, NgIf } from '@angular/common';
 import { Car } from './Shared/Models/car';
 import { CarListComponent } from './car-list/car-list.component';
 import { CarListItemComponent } from './car-list-item/car-list-item.component';
-import { CarService } from './services/car.service';
+import { CarService } from './Services/car.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgForOf, NgIf, CarListComponent, CarListItemComponent],
+  standalone: true,
+  imports: [RouterOutlet, NgForOf, NgIf, CarListComponent, CarListItemComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
