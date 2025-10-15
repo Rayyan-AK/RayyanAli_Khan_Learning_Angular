@@ -1,7 +1,8 @@
 <div class="content-item">
   <div class="car-info">
     <h1>{{ car.make }} {{ car.model }}</h1>
-    <p>VIN: {{ car.vin}}</p>
+
+    <p>VIN: <a [routerLink]="['/cars',car.vin ]">{{car.vin}}</a></p>
     <p>Year: {{ car.year }}</p>
     <p *ngIf="car.color">Color: {{ car.color }}</p>
   </div>
