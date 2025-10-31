@@ -1,7 +1,77 @@
+/* Page Title */
 h1 {
   text-align: center;
   color: sienna;
-  margin: 1em;
-  font-size: 3em;
-  text-shadow: 0 0.4em 0.7em rgba(0, 0, 0, 0.3);
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.25);
+}
+
+
+:host {
+  display: block;
+  padding: 0 10em 2em;
+}
+
+/* Car Item Box */
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.content-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternating colors */
+.content-item:nth-child(even) {
+  background-color: lavenderblush;
+  color: black;
+}
+
+.content-item:nth-child(odd) {
+  background-color: lightseagreen;
+  color: white;
+}
+
+/* Text section */
+.car-info {
+  flex: 1;
+}
+
+.car-info h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+}
+
+/* Image styling */
+.car-image img {
+  max-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+}
+
+/* Links */
+a {
+  color: darkred;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: crimson;
 }

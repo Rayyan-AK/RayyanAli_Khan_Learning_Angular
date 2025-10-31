@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: 'cars', component: CarListComponent },
   { path: 'cars/:vin', component: CarDetailComponent},
   { path: 'modify-car', component: ModifyCarComponent },
+  { path: 'modify-car/:vin', component: ModifyCarComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 bootstrapApplication(App, {

@@ -1,7 +1,21 @@
-<div class="space">
-  <h1>Car Inventory</h1>
 
-  <div class="container">
-    <app-car-list-item *ngFor="let car of cars" [car]="car"></app-car-list-item>
+<h1>Car Inventory</h1>
+
+<div class="content-item" *ngFor="let car of cars">
+
+  <div class="car-info">
+    <h2>{{ car.make }} {{ car.model }}</h2>
+
+    <p>VIN: <a [routerLink]="['/cars',car.vin ]">{{car.vin}}</a></p>
+    <p>Year: {{ car.year }}</p>
+    <p *ngIf="car.color">Color: {{ car.color }}</p>
   </div>
+
+  <div class="car-image">
+<!--    <img [src]="car.image" alt="{{ car.make }} {{ car.model }}" width="200">-->
+    <button [routerLink]="['/modify-car',car.vin ]">Edit</button>
+    <button type="button" (click)="OnDelete(car.vin)">Delete</button>
+  </div>
+
 </div>
+

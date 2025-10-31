@@ -1,2 +1,12 @@
 
-<h1>{{car?.vin}}</h1>
+<div class="car-info">
+  <h1>{{ car?.make }} {{ car?.model }}</h1>
+
+  <p>VIN: {{car?.vin}}</p>
+  <p>Year: {{ car?.year }}</p>
+  <p *ngIf="car?.color">Color: {{ car?.color }}</p>
+</div>
+
+<div class="car-image">
+  <img [src]="car?.image" alt="{{ car?.make }} {{ car?.model }}" width="200">
+</div>

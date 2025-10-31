@@ -20,7 +20,7 @@ export class CarService {
   }
 
   addCar(newCar: Car): Observable<Car[]> {
-    cars.push(newCar);
+    cars.unshift(newCar);
     return of(cars);
   }
 
