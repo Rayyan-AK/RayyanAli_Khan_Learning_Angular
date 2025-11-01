@@ -27,6 +27,7 @@ export class CarService {
   updateCar(updatedCar: Car): Observable<Car[]> {
     const index = cars.findIndex(c => c.vin === updatedCar.vin);
     if (index !== -1) {
+      updatedCar.image = updatedCar.image || cars[index].image;
       cars[index] = updatedCar;
     }
     return of(cars);

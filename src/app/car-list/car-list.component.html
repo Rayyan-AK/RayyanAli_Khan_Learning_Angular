@@ -11,7 +11,7 @@
     <p *ngIf="car.color">Color: {{ car.color }}</p>
   </div>
 
-  <div class="car-image">
+  <div class="buttons">
 <!--    <img [src]="car.image" alt="{{ car.make }} {{ car.model }}" width="200">-->
     <button [routerLink]="['/modify-car',car.vin ]">Edit</button>
     <button type="button" (click)="OnDelete(car.vin)">Delete</button>

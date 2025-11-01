@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  ValidationErrors,
+  Validators
+} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CarService} from '../Services/car.service';
 import {Car} from '../Shared/Models/car';
@@ -26,12 +33,36 @@ export class ModifyCarComponent implements OnInit{
     private router: Router
   ) {
     this.carForm = this.fb.group({
-      vin: ['', Validators.required],
-      make: ['', Validators.required],
+      vin: ['', [Validators.required, Validators.pattern('^[A-Za-z0-9]+$')]],
+      make: ['', [Validators.required, this.noSpecialChars]],
       model: ['', Validators.required],
-      year: ['', Validators.required],
+      year: ['', [Validators.required, this.yearValidator]],
       color: ['']
     });
+  }
+
+  noSpecialChars(control: AbstractControl): ValidationErrors | null {
+    return /[!#?]/.test(control.value) ? { specialChars: true } : null;
+  }
+
+  yearValidator(control: AbstractControl): ValidationErrors | null {
+    const value = control.value;
+    const year = Number(value);
+    const currentYear = new Date().getFullYear();
+
+    if (isNaN(year)) {
+      return { invalidYear: true };
+    }
+
+    if (year < 1886) {
+      return { invalidYear: true };
+    }
+
+    if (year > currentYear) {
+      return { invalidYear: true };
+    }
+
+    return null;
   }
   ngOnInit(): void {
 
