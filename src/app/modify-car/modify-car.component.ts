@@ -13,17 +13,19 @@ import {Car} from '../Shared/Models/car';
 
 
 @Component({
+  standalone: true,
   selector: 'app-modify-car',
   imports: [
     ReactiveFormsModule
   ],
   templateUrl: './modify-car.component.html',
-  styleUrl: './modify-car.component.css'
+  styleUrls: ['./modify-car.component.css']
 })
 export class ModifyCarComponent implements OnInit{
   carForm: FormGroup;
   car: Car | undefined;
   error: string | null = null;
+  currentYear = new Date().getFullYear();
 
 
   constructor(
@@ -84,6 +86,7 @@ export class ModifyCarComponent implements OnInit{
   }
 
   onSubmit(): void {
+    console.log('Form valid?', this.carForm.valid, this.carForm.value);
 
     if (this.carForm.valid) {
       const car: Car = this.carForm.value;

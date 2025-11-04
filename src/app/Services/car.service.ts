@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {catchError, Observable, of, throwError} from 'rxjs';
+import {catchError, map, Observable, of, throwError} from 'rxjs';
 import {Car} from '../Shared/Models/car';
 import {cars} from '../data/mock-content';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
@@ -21,7 +21,10 @@ export class CarService {
   getCarByVin(vin: string): Observable<Car | undefined> {
     // const car = cars.find(c => c.vin === vin);
     // return of(car);
-    return this.http.get<Car>(`${this.apiUrl}/${vin}`).pipe(catchError(this.handleError));
+    return this.http.get<Car[]>(`${this.apiUrl}/?vin=${vin}`).pipe(
+      map(cars => cars[0]),
+      catchError(this.handleError)
+    );
   }
 
   addCar(newCar: Car): Observable<Car> {
@@ -37,6 +40,11 @@ export class CarService {
     //   cars[index] = updatedCar;
     // }
     // return of(cars);
+    const existingCar = this.carList.find(c => c.vin === updatedCar.vin);
+    if (existingCar && !updatedCar.image) {
+      updatedCar.image = existingCar.image;
+    }
+
     const url = `${this.apiUrl}/${updatedCar.vin}`;
     return this.http.put<Car>(url, updatedCar).pipe(catchError(this.handleError));
   }

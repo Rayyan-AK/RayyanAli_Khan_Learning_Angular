@@ -1,14 +1,22 @@
+<div *ngIf="error" class="error-message">
+  {{ error }}
+</div>
 
 <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
-
   <div>
     <label for="vin">VIN: </label>
     <input type="text" id="vin" formControlName="vin" />
+    <div *ngIf="carForm.get('vin')?.invalid && carForm.get('vin')?.touched" class="form-error">
+      VIN is required and must be alphanumeric.
+    </div>
   </div>
 
   <div>
     <label for="make">Make: </label>
     <input type="text" id="make" formControlName="make" />
+    <div *ngIf="carForm.get('make')?.hasError('specialChars') && carForm.get('make')?.touched" class="form-error">
+      Make cannot contain special characters (!, #, ?).
+    </div>
   </div>
 
   <div>
@@ -19,6 +27,9 @@
   <div>
     <label for="year">Year: </label>
     <input type="text" id="year" formControlName="year" />
+    <div *ngIf="carForm.get('year')?.hasError('invalidYear') && carForm.get('year')?.touched" class="form-error">
+      Enter a valid year between 1886 and {{ currentYear }}.
+    </div>
   </div>
 
   <div>
@@ -27,7 +38,5 @@
   </div>
 
   <button type="submit">Submit</button>
-
   <button type="button" (click)="getHome()">Back to List</button>
-
 </form>

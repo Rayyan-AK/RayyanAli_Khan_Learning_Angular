@@ -8,7 +8,9 @@ import { CarService } from './Services/car.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, CarListComponent, RouterLink, RouterLinkActive],
+  imports: [
+    RouterOutlet, NgForOf, NgIf, CarListComponent, RouterLink, RouterLinkActive,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
