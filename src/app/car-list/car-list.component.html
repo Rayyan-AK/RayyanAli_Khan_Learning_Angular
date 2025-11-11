@@ -9,6 +9,7 @@
     <p>VIN: <a [routerLink]="['/cars',car.vin ]">{{car.vin}}</a></p>
     <p>Year: {{ car.year }}</p>
     <p *ngIf="car.color">Color: {{ car.color }}</p>
+    <p [ngClass]="car.price | priceRange">Price: {{car.price}}</p>
   </div>
 
   <div class="buttons">

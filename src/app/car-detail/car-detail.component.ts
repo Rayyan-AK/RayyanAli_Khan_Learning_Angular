@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { Car } from "../Shared/Models/car";
 import {ActivatedRoute} from '@angular/router';
 import {cars} from '../data/mock-content';
-import {CurrencyPipe, DatePipe, NgIf, UpperCasePipe} from "@angular/common";
+import {CurrencyPipe, DatePipe, NgClass, NgIf, UpperCasePipe} from "@angular/common";
+import {PriceRangePipe} from '../Pipes/price-range.pipe';
 
 @Component({
   selector: 'app-car-detail',
@@ -10,7 +11,9 @@ import {CurrencyPipe, DatePipe, NgIf, UpperCasePipe} from "@angular/common";
     NgIf,
     CurrencyPipe,
     DatePipe,
-    UpperCasePipe
+    UpperCasePipe,
+    NgClass,
+    PriceRangePipe
   ],
   templateUrl: './car-detail.component.html',
   styleUrl: './car-detail.component.css'

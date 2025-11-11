@@ -97,3 +97,13 @@ a {
 a:hover {
   color: crimson;
 }
+
+.over {
+  color: darkred;
+  font-weight: bold;
+}
+
+.under {
+  color: green;
+  font-weight: bold;
+}

@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForOf, NgIf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
 import {Car} from '../Shared/Models/car';
 import {CarService} from '../Services/car.service';
 import {Router, RouterLink} from '@angular/router';
 import {FullSpecPipe} from '../Pipes/full-spec.pipe';
+import {PriceRangePipe} from '../Pipes/price-range.pipe';
 
 
 @Component({
@@ -12,7 +13,9 @@ import {FullSpecPipe} from '../Pipes/full-spec.pipe';
     NgIf,
     NgForOf,
     RouterLink,
-    FullSpecPipe
+    FullSpecPipe,
+    PriceRangePipe,
+    NgClass
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'
