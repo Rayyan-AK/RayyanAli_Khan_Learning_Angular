@@ -37,7 +37,9 @@ export class ModifyCarComponent implements OnInit{
       make: ['', [Validators.required, this.noSpecialChars]],
       model: ['', Validators.required],
       year: ['', [Validators.required, this.yearValidator]],
-      color: ['']
+      color: [''],
+      registrationDate: ['', Validators.required],
+      price: ['', Validators.required]
     });
   }
 

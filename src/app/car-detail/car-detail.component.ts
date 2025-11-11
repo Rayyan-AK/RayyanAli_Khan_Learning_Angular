@@ -2,13 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import { Car } from "../Shared/Models/car";
 import {ActivatedRoute} from '@angular/router';
 import {cars} from '../data/mock-content';
-import {NgIf} from "@angular/common";
+import {CurrencyPipe, DatePipe, NgIf, UpperCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-car-detail',
-    imports: [
-        NgIf
-    ],
+  imports: [
+    NgIf,
+    CurrencyPipe,
+    DatePipe,
+    UpperCasePipe
+  ],
   templateUrl: './car-detail.component.html',
   styleUrl: './car-detail.component.css'
 })

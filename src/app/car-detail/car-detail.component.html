@@ -7,6 +7,8 @@
     <h1>{{ car?.make }} {{ car?.model }}</h1>
     <p>VIN: {{car?.vin}}</p>
     <p>Year: {{ car?.year }}</p>
-    <p *ngIf="car?.color">Color: {{ car?.color }}</p>
+    <p>Registration Date: {{car?.registrationDate | date : 'mediumDate' }}</p>
+    <p *ngIf="car?.color">Color: {{ car?.color | uppercase }}</p>
+    <p>Price: {{car?.price | currency : 'CAD': "symbol-narrow" }}</p>
   </div>
 </div>

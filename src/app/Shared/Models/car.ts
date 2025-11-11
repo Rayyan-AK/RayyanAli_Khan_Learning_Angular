@@ -5,4 +5,6 @@
     year: number;
     color?: string;
     image: string;
+    registrationDate: string;
+    price: number;
   }
