@@ -3,6 +3,7 @@ import {NgForOf, NgIf} from '@angular/common';
 import {Car} from '../Shared/Models/car';
 import {CarService} from '../Services/car.service';
 import {Router, RouterLink} from '@angular/router';
+import {FullSpecPipe} from '../Pipes/full-spec.pipe';
 
 
 @Component({
@@ -10,7 +11,8 @@ import {Router, RouterLink} from '@angular/router';
   imports: [
     NgIf,
     NgForOf,
-    RouterLink
+    RouterLink,
+    FullSpecPipe
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'
