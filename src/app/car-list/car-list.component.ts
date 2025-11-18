@@ -5,6 +5,7 @@ import {CarService} from '../Services/car.service';
 import {Router, RouterLink} from '@angular/router';
 import {FullSpecPipe} from '../Pipes/full-spec.pipe';
 import {PriceRangePipe} from '../Pipes/price-range.pipe';
+import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
 
 
 @Component({
@@ -15,7 +16,8 @@ import {PriceRangePipe} from '../Pipes/price-range.pipe';
     RouterLink,
     FullSpecPipe,
     PriceRangePipe,
-    NgClass
+    NgClass,
+    HoverHighlightDirective
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'

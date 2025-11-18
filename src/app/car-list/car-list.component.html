@@ -1,15 +1,16 @@
 
 <h1>Car Inventory</h1>
 
-<div class="content-item" *ngFor="let car of cars">
+<div class="content-item" *ngFor="let car of cars" [appHoverHighlight]="'darkblue'">
 
-  <div class="car-info">
+  <div class="car-info" >
     <h2>{{ car | fullSpec }}</h2>
 
     <p>VIN: <a [routerLink]="['/cars',car.vin ]">{{car.vin}}</a></p>
     <p>Year: {{ car.year }}</p>
     <p *ngIf="car.color">Color: {{ car.color }}</p>
     <p [ngClass]="car.price | priceRange">Price: {{car.price}}</p>
+
   </div>
 
   <div class="buttons">
