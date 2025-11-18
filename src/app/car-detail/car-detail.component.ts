@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {cars} from '../data/mock-content';
 import {CurrencyPipe, DatePipe, NgClass, NgIf, UpperCasePipe} from "@angular/common";
 import {PriceRangePipe} from '../Pipes/price-range.pipe';
+import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
 
 @Component({
   selector: 'app-car-detail',
@@ -13,7 +14,8 @@ import {PriceRangePipe} from '../Pipes/price-range.pipe';
     DatePipe,
     UpperCasePipe,
     NgClass,
-    PriceRangePipe
+    PriceRangePipe,
+    HighlightOnFocusDirective
   ],
   templateUrl: './car-detail.component.html',
   styleUrl: './car-detail.component.css'

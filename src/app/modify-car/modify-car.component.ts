@@ -10,12 +10,16 @@ import {
 import {ActivatedRoute, Router} from '@angular/router';
 import {CarService} from '../Services/car.service';
 import {Car} from '../Shared/Models/car';
+import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
+import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
 
 
 @Component({
   selector: 'app-modify-car',
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightOnFocusDirective,
+    HoverHighlightDirective
   ],
   templateUrl: './modify-car.component.html',
   styleUrl: './modify-car.component.css'

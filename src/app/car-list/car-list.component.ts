@@ -6,6 +6,7 @@ import {Router, RouterLink} from '@angular/router';
 import {FullSpecPipe} from '../Pipes/full-spec.pipe';
 import {PriceRangePipe} from '../Pipes/price-range.pipe';
 import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
+import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
 
 
 @Component({
@@ -17,7 +18,8 @@ import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
     FullSpecPipe,
     PriceRangePipe,
     NgClass,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    HighlightOnFocusDirective
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'

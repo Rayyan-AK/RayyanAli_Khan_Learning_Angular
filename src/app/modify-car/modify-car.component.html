@@ -3,41 +3,41 @@
 
   <div>
     <label for="vin">VIN: </label>
-    <input type="text" id="vin" formControlName="vin" />
+    <input type="text" id="vin" formControlName="vin"[appHighlightOnFocus]="'yellow'" />
   </div>
 
   <div>
     <label for="make">Make: </label>
-    <input type="text" id="make" formControlName="make" />
+    <input type="text" id="make" formControlName="make" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
   <div>
     <label for="model">Model: </label>
-    <input type="text" id="model" formControlName="model" />
+    <input type="text" id="model" formControlName="model" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
   <div>
     <label for="year">Year: </label>
-    <input type="text" id="year" formControlName="year" />
+    <input type="text" id="year" formControlName="year" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
   <div>
     <label for="color">Color: </label>
-    <input type="text" id="color" formControlName="color" />
+    <input type="text" id="color" formControlName="color" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
   <div>
     <label for="registrationDate">Registration Date: </label>
-    <input type="text" id="registrationDate" formControlName="registrationDate" />
+    <input type="text" id="registrationDate" formControlName="registrationDate" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
   <div>
     <label for="price">Price: </label>
-    <input type="text" id="price" formControlName="price" />
+    <input type="text" id="price" formControlName="price" [appHighlightOnFocus]="'yellow'"/>
   </div>
 
-  <button type="submit">Submit</button>
+  <button type="submit" [appHoverHighlight]="'darkblue'">Submit</button>
 
-  <button type="button" (click)="getHome()">Back to List</button>
+  <button type="button" (click)="getHome()" [appHoverHighlight]="'black'">Back to List</button>
 
 </form>
