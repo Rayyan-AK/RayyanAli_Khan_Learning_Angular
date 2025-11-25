@@ -11,40 +11,45 @@
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>VIN</mat-label>
         <input matInput id="vin" formControlName="vin" [readonly]="!!carForm.value.vin" [appHighlightOnFocus]="'yellow'">
-        <mat-icon matSuffix matTooltip="Vehicle Identification Number">fingerprint</mat-icon>
+        <mat-icon matSuffix matTooltip="Vehicle Identification Number (17 characters).">fingerprint</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Make</mat-label>
         <input matInput id="make" formControlName="make" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="The manufacturer (e.g., Honda, Ford).">directions_car</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Model</mat-label>
         <input matInput id="model" formControlName="model" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="The specific model name (e.g., Civic, F-150).">mode_edit</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Year</mat-label>
         <input matInput id="year" type="number" formControlName="year" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="The model year (4 digits, e.g., 2023).">date_range</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Color</mat-label>
         <input matInput id="color" formControlName="color" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="The exterior paint color.">palette</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Registration Date</mat-label>
         <input matInput [matDatepicker]="picker" id="registrationDate" formControlName="registrationDate" [appHighlightOnFocus]="'yellow'">
         <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker-toggle matSuffix [for]="picker" matTooltip="Select the date the car was first registered."></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>$ Price (CAD)</mat-label>
         <input matInput id="price" type="number" formControlName="price" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="The selling price in Canadian dollars (CAD). Must be a positive number.">attach_money</mat-icon>
       </mat-form-field>
 
       <div class="form-actions">

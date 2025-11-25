@@ -1,11 +1,14 @@
-
-<div class="nav-bar">
+<mat-toolbar color="primary">
+  <span>Car Inventory System</span>
+  <span class="spacer"></span>
   <nav>
-    <a routerLink="/cars" routerLinkActive="active">Car List</a>
-    <a routerLink="/modify-car" routerLinkActive="active">Modify Car</a>
+    <a mat-button routerLink="/cars" routerLinkActive="active">
+      <mat-icon>list</mat-icon> Car List
+    </a>
+    <a mat-button routerLink="/modify-car" routerLinkActive="active">
+      <mat-icon>add_circle_outline</mat-icon> Modify Car / Add New
+    </a>
   </nav>
-</div>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
-
-
