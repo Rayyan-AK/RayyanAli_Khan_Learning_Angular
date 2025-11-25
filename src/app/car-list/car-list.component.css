@@ -1,109 +1,210 @@
 
-h1 {
-  text-align: center;
-  color: sienna;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  font-size: 2.8em;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.25);
+/*h1 {*/
+/*  text-align: center;*/
+/*  color: sienna;*/
+/*  margin-top: 1.5em;*/
+/*  margin-bottom: 1em;*/
+/*  font-size: 2.8em;*/
+/*  letter-spacing: 1px;*/
+/*  font-weight: 700;*/
+/*  text-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.25);*/
+/*}*/
+
+/*:host {*/
+/*  display: block;*/
+/*  padding: 0 20em 2em;*/
+/*}*/
+
+
+/*.content-item {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  padding: 20px;*/
+/*  border: 2px solid black;*/
+/*  border-radius: 10px;*/
+/*  margin: 20px 0;*/
+/*  transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*.content-item:nth-child(even) {*/
+/*  background-color: lavenderblush;*/
+/*  color: black;*/
+
+/*  button {*/
+/*    border: 1px solid black;*/
+/*  }*/
+/*}*/
+
+
+
+/*.content-item:nth-child(odd) {*/
+/*  background-color: lightseagreen;*/
+/*  color: white;*/
+
+/*  button {*/
+/*    border: 1px solid white;*/
+/*  }*/
+/*}*/
+
+
+/*.car-info {*/
+/*  flex: 1;*/
+/*}*/
+
+/*.car-info h2 {*/
+/*  font-size: 1.8em;*/
+/*  margin-bottom: 0.3em;*/
+/*}*/
+
+/*.buttons {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 3em;*/
+/*  margin-top: 8px;*/
+/*}*/
+
+/*.buttons button {*/
+/*  padding: 1.5em 3em;*/
+/*  border-radius: 6px;*/
+/*  cursor: pointer;*/
+/*  color: white;*/
+/*  transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*.buttons button:first-child {*/
+/*  background-color: darkolivegreen;*/
+/*}*/
+
+/*.buttons button:last-child {*/
+/*  background-color: darkred;*/
+/*}*/
+
+/*button:hover {*/
+/*  transform: scale(1.02);*/
+/*  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+
+/*a {*/
+/*  color: darkred;*/
+/*  text-decoration: none;*/
+/*  font-weight: bold;*/
+/*  font-size: 1.1em;*/
+/*  transition: color 0.2s;*/
+/*}*/
+
+/*a:hover {*/
+/*  color: crimson;*/
+/*}*/
+
+/*.over {*/
+/*  color: darkred;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.under {*/
+/*  color: green;*/
+/*  font-weight: bold;*/
+/*}*/
+
+.car-inventory-card {
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-:host {
-  display: block;
-  padding: 0 20em 2em;
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 0 24px;
 }
 
+mat-card-header button[mat-flat-button] {
+  background-color: darkgreen;
+  color: white;
+}
+
+.car-list-container {
+  padding: 0;
+}
+
+mat-list-item {
+  height: auto !important;
+  padding: 0 10px;
+  border-bottom: 1px solid gainsboro;
+}
+
+mat-list-item .mdc-list-item__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
 .content-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin: 20px 0;
-  transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 8px 0;
 }
-
-.content-item:nth-child(even) {
-  background-color: lavenderblush;
-  color: black;
-
-  button {
-    border: 1px solid black;
-  }
-}
-
-
-
-.content-item:nth-child(odd) {
-  background-color: lightseagreen;
-  color: white;
-
-  button {
-    border: 1px solid white;
-  }
-}
-
 
 .car-info {
-  flex: 1;
+  flex-grow: 1;
 }
 
-.car-info h2 {
-  font-size: 1.8em;
-  margin-bottom: 0.3em;
+mat-card-subtitle h2 {
+  margin: 0;
+}
+
+.car-info p {
+  margin: 3px 0;
+}
+
+.car-info a[mat-button] {
+  padding: 0;
+  line-height: inherit;
+  min-width: unset;
+  height: auto;
+  font-size: inherit;
+  text-decoration: underline;
+  color: darkred;
+}
+
+.car-info mat-icon[matTooltip] {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 3em;
-  margin-top: 8px;
+  gap: 6px;
+  min-width: 100px;
+  margin-left: 15px;
 }
 
 .buttons button {
-  padding: 1.5em 3em;
-  border-radius: 6px;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
-.buttons button:first-child {
-  background-color: darkolivegreen;
+.buttons button[mat-stroked-button] {
+  color: darkgreen;
+  border-color: darkgreen;
 }
 
-.buttons button:last-child {
-  background-color: darkred;
-}
-
-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-
-a {
-  color: darkred;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: crimson;
-}
-
-.over {
-  color: darkred;
+.high-price {
+  color: red;
   font-weight: bold;
 }
 
-.under {
-  color: green;
-  font-weight: bold;
+.medium-price {
+  color: orange;
+}
+
+.low-price {
+  color: darkgreen;
 }

@@ -5,6 +5,10 @@ import {cars} from '../data/mock-content';
 import {CurrencyPipe, DatePipe, NgClass, NgIf, UpperCasePipe} from "@angular/common";
 import {PriceRangePipe} from '../Pipes/price-range.pipe';
 import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
+import {MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle} from '@angular/material/card';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatDivider} from '@angular/material/divider';
+import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-car-detail',
@@ -15,7 +19,17 @@ import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.direct
     UpperCasePipe,
     NgClass,
     PriceRangePipe,
-    HighlightOnFocusDirective
+    HighlightOnFocusDirective,
+
+    MatCard,
+    MatCardHeader,
+    MatIcon,
+    MatCardTitle,
+    MatCardContent,
+    MatDivider,
+    MatRippleModule,
+    MatIconModule,
+    MatCardImage
   ],
   templateUrl: './car-detail.component.html',
   styleUrl: './car-detail.component.css'

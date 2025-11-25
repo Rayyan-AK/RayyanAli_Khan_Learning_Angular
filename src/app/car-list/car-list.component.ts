@@ -5,8 +5,13 @@ import {CarService} from '../Services/car.service';
 import {Router, RouterLink} from '@angular/router';
 import {FullSpecPipe} from '../Pipes/full-spec.pipe';
 import {PriceRangePipe} from '../Pipes/price-range.pipe';
-import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
-import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardSubtitle} from '@angular/material/card';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatList, MatListItem} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import { MatRippleModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 
 @Component({
@@ -18,8 +23,19 @@ import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.direct
     FullSpecPipe,
     PriceRangePipe,
     NgClass,
-    HoverHighlightDirective,
-    HighlightOnFocusDirective
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardContent,
+    MatCardSubtitle,
+    MatIcon,
+    MatList,
+    MatListItem,
+    MatIcon,
+    MatIconModule,
+    MatButtonModule,
+    MatRippleModule,
+    MatTooltipModule,
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'

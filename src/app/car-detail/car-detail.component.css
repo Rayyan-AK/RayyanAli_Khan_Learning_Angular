@@ -1,36 +1,48 @@
-.car-card {
+
+.car-card-material {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 16px;
   margin: 16px auto;
-  max-width: 300px;
+  max-width: 400px;
 }
 
-
-.car-info {
-  text-align: center;
-  margin-bottom: 12px;
+.car-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 8px 0;
 }
 
-.car-info h1 {
-  margin: 0 0 8px 0;
+mat-card-title h1 {
+  margin: 0;
   font-size: 1.5rem;
   color: darkred;
 }
 
-.car-info p {
-  margin: 4px 0;
-  font-size: 1rem;
-  color: black;
+.car-info-content {
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
 }
 
-.car-image img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.car-info-content p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.car-info-content mat-icon {
+  color: darkred;
+  font-size: 20px;
+}
+
+.price-info {
+  font-weight: bold;
 }

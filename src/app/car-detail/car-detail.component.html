@@ -1,14 +1,38 @@
-<div class="car-card">
-  <div class="car-image">
-    <img [src]="car?.image" alt="{{ car?.make }} {{ car?.model }}">
+
+<mat-card class="car-card-material mat-elevation-z8" matRipple>
+  <div class="image-wrapper">
+    <img mat-card-image [src]="car?.image" alt="{{ car?.make }} {{ car?.model }}">
   </div>
 
-  <div class="car-info">
-    <h1>{{ car?.make }} {{ car?.model }}</h1>
-    <p>VIN: {{car?.vin}}</p>
-    <p>Year: {{ car?.year }}</p>
-    <p>Registration Date: {{car?.registrationDate | date : 'mediumDate' }}</p>
-    <p *ngIf="car?.color">Color: {{ car?.color | uppercase }}</p>
-    <p>Price: {{car?.price | currency : 'CAD': "symbol-narrow" }}</p>
-  </div>
-</div>
+  <mat-card-header class="car-header">
+    <mat-card-title>
+      <h1>{{ car?.make }} {{ car?.model }}</h1>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="car-info-content">
+
+    <mat-divider></mat-divider>
+
+    <p>
+      <mat-icon>verified</mat-icon>
+      VIN: <strong>{{car?.vin}}</strong>
+    </p>
+    <p>
+      <mat-icon>calendar_today</mat-icon>
+      Year: {{ car?.year }}
+    </p>
+    <p>
+      <mat-icon>date_range</mat-icon>
+      Registration Date: {{car?.registrationDate | date : 'mediumDate' }}
+    </p>
+    <p *ngIf="car?.color">
+      <mat-icon>palette</mat-icon>
+      Color: {{ car?.color | uppercase }}
+    </p>
+    <p class="price-info">
+      <mat-icon>attach_money</mat-icon>
+      Price: {{car?.price | currency : 'CAD': "symbol-narrow" }}
+    </p>
+  </mat-card-content>
+</mat-card>

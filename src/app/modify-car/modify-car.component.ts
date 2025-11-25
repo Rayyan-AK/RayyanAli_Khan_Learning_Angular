@@ -12,14 +12,30 @@ import {CarService} from '../Services/car.service';
 import {Car} from '../Shared/Models/car';
 import {HighlightOnFocusDirective} from '../Directives/highlight-on-focus.directive';
 import {HoverHighlightDirective} from '../Directives/hover-highlight.directive';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-modify-car',
   imports: [
     ReactiveFormsModule,
     HighlightOnFocusDirective,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule
   ],
   templateUrl: './modify-car.component.html',
   styleUrl: './modify-car.component.css'
@@ -74,6 +90,7 @@ export class ModifyCarComponent implements OnInit{
 
     const vin = String(this.route.snapshot.paramMap.get('vin'));
     if (vin) {
+
 
       this.carService.getCarByVin(vin).subscribe( {
         next: car => {

@@ -1,23 +1,44 @@
 
-<h1>Car Inventory</h1>
+<mat-card class="car-inventory-card mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Car Inventory</h1>
+    </mat-card-title>
+  </mat-card-header>
 
-<div class="content-item" *ngFor="let car of cars" [appHoverHighlight]="'darkblue'">
+  <mat-card-content>
+    <mat-list class="car-list-container">
+      <mat-list-item *ngFor="let car of cars" matRipple>
 
-  <div class="car-info" >
-    <h2>{{ car | fullSpec }}</h2>
+        <div class="content-item">
+          <div class="car-info">
+            <mat-card-subtitle>
+              <h2>{{ car | fullSpec }}</h2>
+            </mat-card-subtitle>
 
-    <p>VIN: <a [routerLink]="['/cars',car.vin ]">{{car.vin}}</a></p>
-    <p>Year: {{ car.year }}</p>
-    <p *ngIf="car.color">Color: {{ car.color }}</p>
-    <p [ngClass]="car.price | priceRange">Price: {{car.price}}</p>
+            <p>VIN: <a [routerLink]="['/cars',car.vin ]" mat-button>{{car.vin}}</a></p>
+            <p>Year: {{ car.year }}</p>
+            <p *ngIf="car.color">Color: {{ car.color }}</p>
+            <p [ngClass]="car.price | priceRange">
+              Price: {{car.price}}
+              <mat-icon matTooltip="Price Range Indicator">info</mat-icon>
+            </p>
+          </div>
 
-  </div>
+          <div class="buttons">
+            <button mat-stroked-button color="accent" [routerLink]="['/modify-car',car.vin ]">
+              <mat-icon>edit</mat-icon>
+              Edit
+            </button>
+            <button mat-raised-button color="warn" (click)="OnDelete(car.vin)">
+              <mat-icon>delete</mat-icon>
+              Delete
+            </button>
+          </div>
+        </div>
 
-  <div class="buttons">
-<!--    <img [src]="car.image" alt="{{ car.make }} {{ car.model }}" width="200">-->
-    <button [routerLink]="['/modify-car',car.vin ]">Edit</button>
-    <button type="button" (click)="OnDelete(car.vin)">Delete</button>
-  </div>
-
-</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
 

@@ -1,43 +1,61 @@
+<mat-card class="form-card mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>{{ carForm.value.vin ? 'Modify Car Details' : 'Add New Car' }}</h1>
+    </mat-card-title>
+  </mat-card-header>
 
-<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+  <mat-card-content>
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
 
-  <div>
-    <label for="vin">VIN: </label>
-    <input type="text" id="vin" formControlName="vin"[appHighlightOnFocus]="'yellow'" />
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>VIN</mat-label>
+        <input matInput id="vin" formControlName="vin" [readonly]="!!carForm.value.vin" [appHighlightOnFocus]="'yellow'">
+        <mat-icon matSuffix matTooltip="Vehicle Identification Number">fingerprint</mat-icon>
+      </mat-form-field>
 
-  <div>
-    <label for="make">Make: </label>
-    <input type="text" id="make" formControlName="make" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Make</mat-label>
+        <input matInput id="make" formControlName="make" [appHighlightOnFocus]="'yellow'">
+      </mat-form-field>
 
-  <div>
-    <label for="model">Model: </label>
-    <input type="text" id="model" formControlName="model" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Model</mat-label>
+        <input matInput id="model" formControlName="model" [appHighlightOnFocus]="'yellow'">
+      </mat-form-field>
 
-  <div>
-    <label for="year">Year: </label>
-    <input type="text" id="year" formControlName="year" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Year</mat-label>
+        <input matInput id="year" type="number" formControlName="year" [appHighlightOnFocus]="'yellow'">
+      </mat-form-field>
 
-  <div>
-    <label for="color">Color: </label>
-    <input type="text" id="color" formControlName="color" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Color</mat-label>
+        <input matInput id="color" formControlName="color" [appHighlightOnFocus]="'yellow'">
+      </mat-form-field>
 
-  <div>
-    <label for="registrationDate">Registration Date: </label>
-    <input type="text" id="registrationDate" formControlName="registrationDate" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Registration Date</mat-label>
+        <input matInput [matDatepicker]="picker" id="registrationDate" formControlName="registrationDate" [appHighlightOnFocus]="'yellow'">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
-  <div>
-    <label for="price">Price: </label>
-    <input type="text" id="price" formControlName="price" [appHighlightOnFocus]="'yellow'"/>
-  </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>$ Price (CAD)</mat-label>
+        <input matInput id="price" type="number" formControlName="price" [appHighlightOnFocus]="'yellow'">
+      </mat-form-field>
 
-  <button type="submit" [appHoverHighlight]="'darkblue'">Submit</button>
+      <div class="form-actions">
+        <button mat-button color="primary" type="submit"  [appHoverHighlight]="'darkblue'">
+          <mat-icon>save</mat-icon> Submit
+        </button>
 
-  <button type="button" (click)="getHome()" [appHoverHighlight]="'black'">Back to List</button>
-
-</form>
+        <button mat-button type="button" (click)="getHome()" [appHoverHighlight]="'black'">
+          <mat-icon>arrow_back</mat-icon> Back to List
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
